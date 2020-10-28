@@ -1,0 +1,73 @@
+body{
+  background-color: rgb(44, 21, 68);
+  color:rgb(240, 239, 239);
+  font-family: Roboto;
+}
+
+.row{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(29, 16, 43);
+  padding: 40px 15px;
+  font-size: 14px;
+  font-weight: 300;
+  transform: translate(-50%,-50%);
+}
+
+.card-content li{
+  background-color: rgb(73, 9, 73);
+  padding:20px ;
+  list-style: square;
+  margin: 18px;
+}
+
+.title-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description{
+  color: rgb(194, 189, 189);
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.input input,.input button{
+  margin-bottom: 10px;
+  padding: 11px 12px;
+  border: none;
+}
+
+.input input{
+  background: rgb(20, 7, 22);
+  outline: none;
+  color: #eee;
+  font-size: 14px;
+}
+
+.input input:active{
+  border: 1px solid purple;
+}
+
+.input button{
+   outline: none;
+   border: none;
+   color: #eee;
+   font-size: 14px;
+   background-color: rgb(172, 133, 27);
+}
+
+.input button:active{
+  background-color: rgb(66, 52, 14);
+}
+
+
+
+
