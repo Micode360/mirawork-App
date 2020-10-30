@@ -9,10 +9,11 @@ mainBase();
 
 app.use(express.json({ extended: false }));
 
-app.get('/', (req,res) => {
-    res.send('Hello');
-});
+app.use(express.static('client/public'));
 
+app.get('/', (req, res) =>
+res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
+);
 
 
 const port = process.env.PORT || 5000;
