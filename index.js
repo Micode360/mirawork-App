@@ -1,7 +1,13 @@
 const express = require('express');
+var cors = require('cors')
 const mainBase = require('./config/base');
 
+
+
+
 const app = express();
+app.use(express.json());
+app.use(cors())
 require('dotenv').config();
 
 mainBase();
@@ -9,11 +15,19 @@ mainBase();
 
 app.use(express.json({ extended: false }));
 
-app.use(express.static('client/public'));
+const userRouter = require('./routes/user.reg');
 
-app.get('/', (req, res) =>
-res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'))
-);
+app.use('/:work/user', userRouter);
+
+app.get('/api',(req,res) => {
+    const data = { 
+        name: 'King',
+        status: 'online',
+        description: 'This is my api'
+    }
+    res.json(data);
+});
+
 
 
 const port = process.env.PORT || 5000;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 
 const OptionsNavbar = () => {
@@ -7,15 +8,15 @@ const OptionsNavbar = () => {
        
             <div className="userscreen-left-navbar">
 
-            <Col style={{paddingTop:'20px'}}>
+            <Col style={{paddingTop:'20px',postion:'relative'}}>
                 <div className="profile-img profile-img-resize"></div>
                 <nav className="wall-navbar">
-                    <a style={{display:'flex', flexDirection:"row"}}><i class="fa fa-tachometer" aria-hidden="true"></i> Darshboard</a>
-                    <a><i class="fa fa-users" aria-hidden="true"></i> Users</a>
+                <Link to='/' className="Nav-wall-Link" style={{display:'flex', flexDirection:"row"}}><i className="fa fa-tachometer" aria-hidden="true"></i> Darshboard</Link>
+                    <Link to='/users' className="Nav-wall-Link"><i className="fa fa-users" aria-hidden="true"></i> Users</Link>
                     
                     <div className="bottom-navbar">
-                        <a><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
-                        <a><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a>
+                        <Link to='/settings' className="Nav-wall-Link"><i className="fa fa-cog" aria-hidden="true"></i> Settings</Link>
+                        <Link to='/logout' className="Nav-wall-Link"><i className="fa fa-sign-out" aria-hidden="true"></i> LogOut</Link>
                     </div>
                 </nav>
             </Col>   
