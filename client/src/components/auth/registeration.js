@@ -21,7 +21,7 @@ import  axios  from 'axios'
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:6600/:work/user/createUser', user).then((data) => {
+        axios.post('http://localhost:6600/:work/user/signup', user).then((data) => {
           console.log(data)
         }).catch(err=>console.log(err))
         window.location.href = 'http://localhost:3000/SignIn';
